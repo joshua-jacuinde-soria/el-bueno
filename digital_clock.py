@@ -35,3 +35,4 @@ class Digital_clock:
         self.__m = self.__m + 1 if self.__s == 59 else self.__m
         self.__m = 0 if self.__m == 60 else self.__m
         self.__s = self.__s + 1 if self.__s < 59 else 0
+    
