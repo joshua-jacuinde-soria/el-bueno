@@ -1,5 +1,5 @@
 class Digital_clock:
-    def __init__(self, h:int = 0, m: int = 0, s: int = 0) -> None:
+    def __init__(self, h:int = 23, m: int = 58, s: int = 0) -> None:
         """Contrtuctor
 
         Args:
