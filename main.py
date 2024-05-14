@@ -1,4 +1,4 @@
-from test import clock_test
+from test import prueba_fsm
 
 debug = True
 
@@ -7,6 +7,6 @@ def main():
 
 if __name__ == '__main__':
     if debug:
-        clock_test()
+        prueba_fsm()
     else:
         main()
