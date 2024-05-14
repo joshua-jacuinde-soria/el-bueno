@@ -8,6 +8,6 @@ def clock_test():
         h, m, s = clock.get_time()
         time = f'{h:02} : {m:02} : {s:02}'
         print(time)
-        oled_pruebas(time)
         sleep(1)
+        oled_pruebas(time)
         clock.incremento()

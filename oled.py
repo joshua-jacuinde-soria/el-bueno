@@ -8,10 +8,11 @@ i2c = I2C(sda = Pin(8), scl = Pin(9), id = 0)
 oled = SSD1306_I2C(128, 32, i2c)
 
 def oled_pruebas(tiempo):
+    oled.fill(0)
     oled.text('Tiempo', 50, 0)
     oled.text(tiempo, 20, 10)
     oled.show()
-    sleep(1)
+    
     
 def abrir_imagen(ruta):
     doc = open(ruta, "rb")
@@ -22,7 +23,4 @@ def abrir_imagen(ruta):
     imagen = bytearray(doc.read())
     doc.close()
     return FrameBuffer(imagen, x, y, MONO_HLSB)
-
-oled.blit(abrir_imagen("ajolote.pbm"), 35, 10)
-oled.show()
     
