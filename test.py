@@ -35,25 +35,25 @@ def prueba_fsm():
     while True:
         estado = fsm.obtener_estado_concurrido()
         if estado == 0:
-            print(f'estado concurrido{estado}')
+            print(f'estado concurrido {estado}')
             sleep(1)
-            fsm.computar_siguiente_estado(estado)
+            fsm.computar_siguiente_estado(eventos['incondicional'])
         elif estado == 1:
-            print(f'estado concurrido{estado}')
+            print(f'estado concurrido {estado}')
             sleep(1)
             rnd = randint(eventos['por_defecto'],eventos['presionar_boton'])
             fsm.computar_siguiente_estado(rnd)
         elif estado == 2:
-            print(f'estado concurrido{estado}')
+            print(f'estado concurrido {estado}')
             sleep(1)
             rnd = randint(eventos['boton'],eventos['no_boton'])
             fsm.computar_siguiente_estado(rnd)
         elif estado == 4:
-            print(f'estado concurrido{estado}')
+            print(f'estado concurrido {estado}')
             sleep(1)
             fsm.computar_siguiente_estado(eventos['no_tempo'])
         elif estado == 5:
-            print(f'estado concurrido{estado}')
+            print(f'estado concurrido {estado}')
             sleep(1)
             fsm.computar_siguiente_estado(eventos['no_tempo'])
         else:

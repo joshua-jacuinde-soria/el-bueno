@@ -7,7 +7,7 @@ class FSM:
         Args:
             estado_inicial (int, optional): El estado inicial. Defaults to 0.
         """
-        self.__estadoConcurrido: int = estado_inicial
+        self.__estado_concurrido: int = estado_inicial
         self.__reglas_transision: dict[tuple[int, int], int] = {}
         
     def obtener_estado_concurrido(self):
@@ -17,7 +17,7 @@ class FSM:
             Returns:
                 int: El estado concurrido de la FSM
         """
-        return self.__estadoConcurrido
+        return self.__estado_concurrido
         
     def computar_siguiente_estado(self, ev:int):
         """Actualiza el codigo del estado concurrido acuerdo al siguiente estado
